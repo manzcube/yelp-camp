@@ -1,4 +1,10 @@
 
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config()
+}
+
+
+
 // General requirements
 
 const express = require('express')

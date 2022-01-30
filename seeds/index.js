@@ -27,9 +27,22 @@ const seedDB = async () => {
             author: '61f02134911926ccc1d5cf31',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://source.unsplash.com/collection/483251',
             description: 'Every time you rap, you suck you duck big bang ping pong ding don big punch get lunch my lanch my ranch is batch fight without knife I have your wife and wifi',
-            price
+            price,
+            images: [
+                {
+                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552867/YelpCamp/ry0lhg4kzqv5wqfeasci.jpg',
+                  filename: 'YelpCamp/ry0lhg4kzqv5wqfeasci'
+                },
+                {
+                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552867/YelpCamp/ko2nna0yzhlgb0cbfza1.jpg',
+                  filename: 'YelpCamp/ko2nna0yzhlgb0cbfza1'
+                },
+                {
+                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552868/YelpCamp/cymqhavitmxnocnzw52n.jpg',
+                  filename: 'YelpCamp/cymqhavitmxnocnzw52n'
+                }
+              ]
         })
         await newCampGround.save()
     }

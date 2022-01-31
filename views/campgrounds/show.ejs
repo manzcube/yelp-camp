@@ -1,27 +1,35 @@
 <% layout('layouts/boilerplate') %>
 <link rel="stylesheet" href="/style/stars.css">
 
+
+
 <div class="row">
     <div class="col-md-6 col-12">
-        <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <% campground.images.forEach((img, i) => { %> 
-                    <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
-                        <img src="<%=img.url%>" class="d-block w-100">
+        <div id="map" style="width: 400px; height: 300px;"></div>
+            <% if(!campground.images.length) {%> 
+                <img src='https://www.varaka.com/wp-content/uploads/2020/07/resim-yok.png' class="img-fluid">
+            <% } else { %> 
+                <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <% campground.images.forEach((img, i) => { %> 
+                            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                                <img src="<%=img.url%>" class="d-block w-100">
+                            </div>
+                        <% }) %>
                     </div>
-                <% }) %>
-            </div>
-            <% if(campground.images.length > 1) { %> 
-                <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-            <% } %>
-        </div>
+                    <% if(campground.images.length > 1) { %> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    <% } %>
+                </div>
+            <% } %> 
+        
 
         <div class="card mb-4">
             <div class="card-body">
@@ -98,7 +106,8 @@
    
 </div>
 
-
-
-
-
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const campground = <%- JSON.stringify(campground) %>  // SOlve this syntax error
+ </script>
+<script src="/js/showPageMap.js"></script>

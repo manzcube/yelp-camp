@@ -8,7 +8,11 @@
         <div class="card mb-3">
             <div class="row">
                 <div class="col-lg-4">
-                    <img src='<%=campground.images[0].url%>' class="img-fluid">
+                    <% if(!campground.images.length) {%> 
+                        <img src='https://www.varaka.com/wp-content/uploads/2020/07/resim-yok.png' class="img-fluid">
+                    <% } else { %> 
+                        <img src='<%=campground.images[0].url%>' class="img-fluid">
+                    <% } %> 
                 </div>
                 <div class="col-lg-8">
                     <div class="card-body">

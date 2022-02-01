@@ -27,22 +27,26 @@ const seedDB = async () => {
             author: '61f02134911926ccc1d5cf31',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            description: 'Every time you rap, you suck you duck big bang ping pong ding don big punch get lunch my lanch my ranch is batch fight without knife I have your wife and wifi',
+            description: 'Description for a campground.',
             price,
+            geometry: {
+              type: "Point",
+              coordinates: [ -122.463, 37.7648 ]
+            },
             images: [
-                {
-                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552867/YelpCamp/ry0lhg4kzqv5wqfeasci.jpg',
-                  filename: 'YelpCamp/ry0lhg4kzqv5wqfeasci'
-                },
-                {
-                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552867/YelpCamp/ko2nna0yzhlgb0cbfza1.jpg',
-                  filename: 'YelpCamp/ko2nna0yzhlgb0cbfza1'
-                },
-                {
-                  url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643552868/YelpCamp/cymqhavitmxnocnzw52n.jpg',
-                  filename: 'YelpCamp/cymqhavitmxnocnzw52n'
-                }
-              ]
+              {
+                url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643738524/YelpCamp/f5y0qz7urm15pvluordn.png',
+                filename: 'YelpCamp/f5y0qz7urm15pvluordn'
+              },
+              {
+                url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643738524/YelpCamp/h4kpo4rmocqdowoh7orx.jpg',
+                filename: 'YelpCamp/h4kpo4rmocqdowoh7orx'
+              },
+              {
+                url: 'https://res.cloudinary.com/bubafohju/image/upload/v1643738525/YelpCamp/xmijeifmcvgtpqndwih7.jpg',
+                filename: 'YelpCamp/xmijeifmcvgtpqndwih7'
+              }
+            ]
         })
         await newCampGround.save()
     }

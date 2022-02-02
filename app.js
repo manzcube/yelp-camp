@@ -18,6 +18,8 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local')
 const User = require('./models/user')
 
+const mongoSanitize = require('express-mongo-sanitize')
+
 // Utilities
 
 const ExpressError = require('./utils/ExpressError')
@@ -63,6 +65,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(mongoSanitize())
 
 
 
@@ -103,12 +106,6 @@ app.use((req, res, next) => {
 
 // Routing paths
 
-app.get('/fakeUser', async (req, res) => {
-    const user = new User({ email: 'colt@gmail.com', username: 'colt123'})
-    const newUser = await User.register(user, 'chicken')
-    res.send(newUser)
-})
-
 app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', reviewRoutes)
 app.use('/', userRoutes)
@@ -116,7 +113,7 @@ app.use('/', userRoutes)
 // Routing
 
 app.get(['/', '/home'], (req, res) => {
-    res.render('home')
+    res.render('campgrounds/home')
 })
 
 // Handling routing errors

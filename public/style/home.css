@@ -1,0 +1,22 @@
+#homeTitle {
+    font-size: 6vw;
+    color: white;
+    font-family: 'Supermercado One', cursive;
+}
+
+#homeText {
+    font-size: 2vw;
+    color: white;
+    font-family: 'Supermercado One', cursive;
+}
+
+#homeAnchor {
+    font-size: 1.3vw;
+    color: white;
+    font-family: 'Supermercado One', cursive;
+}
+
+#homeAnchor:hover {
+    color: rgb(71, 134, 230);
+}
+

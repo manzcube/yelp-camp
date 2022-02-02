@@ -13,11 +13,14 @@ const ImageSchema = new Schema({
 })
 
 
-ImageSchema.virtual('thumbnail').get(function() {
-    return this.url.replace('/upload', '/upload/w_300')
-})
+// ImageSchema.virtual('thumbnail').get(function() {
+//     return this.url.replace('/upload', '/upload/w_300')  
+// })  Doesn't work for the moment.
 
-const campgroundSchema = new Schema ({
+
+const opts = { toJSON: { virtuals: true } }
+
+const CampgroundSchema = new Schema ({
     title: String,
     images: [ImageSchema],
     geometry: {
@@ -44,15 +47,23 @@ const campgroundSchema = new Schema ({
             ref: 'Review'
         }
     ]
+}, opts)
+
+
+CampgroundSchema.virtual('properties.popUpMarkup').get(function() {
+    return `<a href="/campgrounds/${this._id}" class="text-primary">${this.title}</a>`
 })
 
-campgroundSchema.post('findOneAndDelete', async function (campground) {   
+
+
+
+CampgroundSchema.post('findOneAndDelete', async function (campground) {   
     if(campground.reviews.length) {       
         const res = await Review.deleteMany({_id: {$in: campground.reviews}})
     }
 })
 
 
-module.exports = mongoose.model('Campground', campgroundSchema);
+module.exports = mongoose.model('Campground', CampgroundSchema);
 
 

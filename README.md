@@ -30,5 +30,6 @@ And finally the deployment part.
 
 
 <h3>Images</h3>
-![ex1](https://user-images.githubusercontent.com/88792194/152973552-9878f478-b2a0-4b0a-8210-3ef9b872225c.png)
-![ex2](https://user-images.githubusercontent.com/88792194/152973561-87f55226-6631-481e-bee8-7061b8841798.png)
+
+![first-yelpcamp-img](https://user-images.githubusercontent.com/88792194/152976673-3a6b9456-0000-4f28-8338-8c511014ccc8.png)
+![second-yelpcamp-img](https://user-images.githubusercontent.com/88792194/152976693-abe2e695-2ffb-4300-96ff-c9527bb31740.png)

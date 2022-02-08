@@ -9,12 +9,12 @@
 
 
 
-This is a project is a yelp for campgrounds. Made of a udemy bootcamp course: Web Development Bootcamp 2022.
+<p>This is a project is a yelp for campgrounds. Made of a udemy bootcamp course: Web Development Bootcamp 2022.
 Things to consider, in .gitignore there is the node_modules folder and an .env file that save api keys to could save the images in Cloudinary instead of in your local machine.
 To get the same, create a free account on Cloudinary, and create a .env file on the top layer of your project, there save these key-value pairs but with your own information.
-Also you have to create an account on mapbox to generate the maps and put your mapbox token in the .env file.
+Also you have to create an account on mapbox to generate the maps and put your mapbox token in the .env file.</p>
 
-Structure of the .env file
+<h6>Structure of the .env file</h6>
 
 CLOUDINARY_CLOUD_NAME=yourcloudname
 CLOUDINARY_KEY=yourcloudinaryapikey

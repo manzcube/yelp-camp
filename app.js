@@ -95,7 +95,7 @@ app.use(flash())
 
 
 
-//HELMET and configuration in the secure access
+//HELMET and configuration in the secure access  HERE WE SHOULD HAVE ALL OUR URL'S TO THE NEEDED WEBSITES
 // const scriptSrcUrls = [
 //     "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
 //     "https://api.tiles.mapbox.com",
@@ -133,7 +133,7 @@ app.use(flash())
 //                 "'self'",
 //                 "blob:",
 //                 "data:",
-//                 "https://res.cloudinary.com/bubafohju/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+//                 "https://res.cloudinary.com/youraccountname/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
 //                 "https://images.unsplash.com",
 //             ],
 //             fontSrc: ["'self'", ...fontSrcUrls],

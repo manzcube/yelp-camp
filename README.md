@@ -14,7 +14,8 @@ MAPBOX_TOKEN=yourmapboxtoken
 
 And by this the keys are save inside files property of req object.
 
-
+<h3>Modules and fw I used</h3>
+Passport, cloudinary, multer storage cloudinary, ejs, express-session, multer, mongoose, connect-flash, method-override, dotenv, cloudinary, cookie-parser, ejs-mate, express, encodeurl, joi validation, parseurl, proxy.
 
 <h3>What I learned? </h3>
 <hr>

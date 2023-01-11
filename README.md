@@ -6,8 +6,8 @@ Passport, cloudinary, multer storage cloudinary, ejs, express-session, multer, m
 
 <h3>What I learned? </h3>
 <hr>
-To create node local servers with express, following MVC design pattern. The use of partils, templating, routing with ejs.
-Full CRUD of different mongoDB Schemas, importing and exporting data from MongoDB. The use of external sources like image uploading or the use of mapbox to generate custom maps. Verification, authentication and authorization of users, flash messages, mongo relationships, error handling, cookies and sessions, ...
+To create node REST API with express, following MVC design pattern. The use of partils, templating, routing with ejs.
+CRUD of different mongoDB Schemas, importing and exporting data from MongoDB. The use of external sources like image uploading or the use of mapbox to generate custom maps. Verification, authentication and authorization of users, flash messages, mongo relationships, error handling, cookies and sessions, ...
 
 
 <h3>Images</h3>
